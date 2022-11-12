@@ -1,0 +1,2331 @@
+  [1m[35m (1220.2ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_development" ENCODING = 'unicode'[0m
+  [1m[35m (171.6ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_test" ENCODING = 'unicode'[0m
+  [1m[35m (32.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(723150122408807205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCats (20221111224151)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (29.4ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221111224151"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (6.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-11-11 22:44:13.298763"], ["updated_at", "2022-11-11 22:44:13.298763"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(723150122408807205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Create (105.1ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2003-01-01"], ["color", "black"], ["name", "cat1"], ["sex", "M"], ["description", nil], ["created_at", "2022-11-11 23:29:29.269990"], ["updated_at", "2022-11-11 23:29:29.269990"]]
+  [1m[36mTRANSACTION (28.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (557.1ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_development" ENCODING = 'unicode'[0m
+  [1m[35m (820.4ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_test" ENCODING = 'unicode'[0m
+  [1m[35m (57.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (29.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(723150122408807205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCats (20221111224151)
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (68.1ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221111224151"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (26.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-11-11 23:41:02.312224"], ["updated_at", "2022-11-11 23:41:02.312224"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(723150122408807205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_development" ENCODING = 'unicode'[0m
+  [1m[35m (16.8ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_test" ENCODING = 'unicode'[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (2.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (22.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (10.9ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "5879262972426de8f0fa224d56dab48cee5ccec6"], ["created_at", "2022-11-11 23:41:10.579890"], ["updated_at", "2022-11-11 23:41:10.579890"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (16.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (11.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20221111224151)[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-11-11 23:41:10.737784"], ["updated_at", "2022-11-11 23:41:10.737784"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-11-11 23:41:10.750523"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "5879262972426de8f0fa224d56dab48cee5ccec6"], ["created_at", "2022-11-11 23:41:10.771278"], ["updated_at", "2022-11-11 23:41:10.771278"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (16.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Load (21.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (41.3ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_development" ENCODING = 'unicode'[0m
+  [1m[35m (19.5ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_test" ENCODING = 'unicode'[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (12.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (48.2ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (2.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2022-11-11 23:42:06.808349"], ["key", "environment"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (3.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-11-11 23:42:06.856606"], ["key", "environment"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (33.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Load (2.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  [1m[36mTRANSACTION (15.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Create (1.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2010-10-10"], ["color", "white"], ["name", "mittens"], ["sex", "M"], ["description", "a cat w/ mittens"], ["created_at", "2022-11-11 23:42:31.217785"], ["updated_at", "2022-11-11 23:42:31.217785"]]
+  [1m[36mTRANSACTION (77.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_development" ENCODING = 'unicode'[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_test" ENCODING = 'unicode'[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (17.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (5.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35mSQL (3.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (7.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2022-11-11 23:43:25.560001"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-11-11 23:43:25.569320"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Load (2.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (199.7ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_test" ENCODING = 'unicode'[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (13.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (3.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35mSQL (2.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (33.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (19.6ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (6.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (11.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (39.5ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (11.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2022-11-12 00:06:04.420666"], ["key", "environment"]]
+  [1m[36mTRANSACTION (29.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-11-12 00:06:04.462632"], ["key", "environment"]]
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (9.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Load (49.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  [1m[36mTRANSACTION (67.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Create (1.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2010-10-10"], ["color", "white"], ["name", "mittens"], ["sex", "M"], ["description", "a cat w/ mittens"], ["created_at", "2022-11-12 00:06:55.824015"], ["updated_at", "2022-11-12 00:06:55.824015"]]
+  [1m[36mTRANSACTION (86.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_test" ENCODING = 'unicode'[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (3.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (10.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2022-11-12 00:08:06.336820"], ["key", "environment"]]
+  [1m[36mTRANSACTION (29.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-11-12 00:08:06.389710"], ["key", "environment"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Load (5.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  [1m[36mCat Create (14.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2010-10-10"], ["color", "white"], ["name", "mittens"], ["sex", "M"], ["description", "a cat w/ mittens"], ["created_at", "2022-11-12 00:08:07.032539"], ["updated_at", "2022-11-12 00:08:07.032539"]]
+  [1m[36mCat Create (2.1ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2008-11-11"], ["color", "grey"], ["name", "boots"], ["sex", "M"], ["description", "a cat w/ boots"], ["created_at", "2022-11-12 00:08:07.054394"], ["updated_at", "2022-11-12 00:08:07.054394"]]
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2015-12-12"], ["color", "black"], ["name", "snuggy face"], ["sex", "M"], ["description", "a snuggy cat"], ["created_at", "2022-11-12 00:08:07.059355"], ["updated_at", "2022-11-12 00:08:07.059355"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/cats" for ::1 at 2022-11-11 16:21:54 -0800
+Started GET "/cats" for ::1 at 2022-11-11 16:21:57 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (90.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatsController#index as HTML
+Processing by CatsController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/index.html.erb within layouts/application (Duration: 181.9ms | Allocations: 4589)
+  Rendered cats/index.html.erb within layouts/application (Duration: 183.9ms | Allocations: 6386)
+  Rendered layout layouts/application.html.erb (Duration: 219.4ms | Allocations: 6561)
+  Rendered layout layouts/application.html.erb (Duration: 219.3ms | Allocations: 6543)
+Completed 500 Internal Server Error in 459ms (ActiveRecord: 0.0ms | Allocations: 10229)
+
+
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 0.0ms | Allocations: 10070)
+
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/cats/index.html.erb:3
+  app/controllers/cats_controller.rb:4:in `index'
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/cats/index.html.erb:3
+  app/controllers/cats_controller.rb:4:in `index'
+
+Started POST "/__better_errors/e3240ff79fa3fa13/variables" for ::1 at 2022-11-11 16:22:08 -0800
+Started GET "/cats" for ::1 at 2022-11-11 16:22:36 -0800
+Started GET "/cats" for ::1 at 2022-11-11 16:22:37 -0800
+Processing by CatsController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (185.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 1360.7ms | Allocations: 8045)
+  Rendered layout layouts/application.html.erb (Duration: 1403.0ms | Allocations: 8140)
+Completed 500 Internal Server Error in 1565ms (ActiveRecord: 486.2ms | Allocations: 9539)
+
+
+
+ActionView::MissingTemplate - Missing partial cats/_cat, application/_cat with {:locale=>[:en], :formats=>[:html, :text, :js, :css, :ics, :csv, :vcf, :vtt, :png, :jpeg, :gif, :bmp, :tiff, :svg, :mpeg, :mp3, :ogg, :m4a, :webm, :mp4, :otf, :ttf, :woff, :woff2, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json, :pdf, :zip, :gzip], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}.
+Searched in:
+  * "/Users/wbannister/Library/CloudStorage/OneDrive-Personal/aa/W6D5/W6D5_99_cats/ninety-nine-cats/app/views":
+  app/views/cats/index.html.erb:4
+  app/views/cats/index.html.erb:3
+  app/controllers/cats_controller.rb:4:in `index'
+
+Processing by CatsController#index as HTML
+Started GET "/cats" for ::1 at 2022-11-11 16:22:41 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 159.6ms | Allocations: 5475)
+  Rendered layout layouts/application.html.erb (Duration: 169.3ms | Allocations: 5598)
+Completed 500 Internal Server Error in 445ms (ActiveRecord: 91.0ms | Allocations: 8039)
+
+
+
+ActionView::MissingTemplate - Missing partial cats/_cat, application/_cat with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}.
+Searched in:
+  * "/Users/wbannister/Library/CloudStorage/OneDrive-Personal/aa/W6D5/W6D5_99_cats/ninety-nine-cats/app/views":
+  app/views/cats/index.html.erb:4
+  app/views/cats/index.html.erb:3
+  app/controllers/cats_controller.rb:4:in `index'
+
+  [1m[36mCat Load (1.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 511.4ms | Allocations: 21572)
+  Rendered layout layouts/application.html.erb (Duration: 521.6ms | Allocations: 21782)
+Completed 500 Internal Server Error in 598ms (ActiveRecord: 119.7ms | Allocations: 23217)
+
+
+
+ActionView::MissingTemplate - Missing partial cats/_cat, application/_cat with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}.
+Searched in:
+  * "/Users/wbannister/Library/CloudStorage/OneDrive-Personal/aa/W6D5/W6D5_99_cats/ninety-nine-cats/app/views":
+  app/views/cats/index.html.erb:4
+  app/views/cats/index.html.erb:3
+  app/controllers/cats_controller.rb:4:in `index'
+
+Started POST "/__better_errors/f561505d4c817e4b/variables" for ::1 at 2022-11-11 16:22:43 -0800
+Started GET "/cats" for ::1 at 2022-11-11 16:29:04 -0800
+Processing by CatsController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (2.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 567.1ms | Allocations: 3962)
+  Rendered layout layouts/application.html.erb (Duration: 1339.6ms | Allocations: 10442)
+Completed 200 OK in 1371ms (Views: 1358.1ms | ActiveRecord: 119.5ms | Allocations: 11270)
+
+
+Started GET "/cats" for ::1 at 2022-11-11 16:29:27 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (40.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 198.0ms | Allocations: 664)
+  Rendered layout layouts/application.html.erb (Duration: 207.7ms | Allocations: 1697)
+Completed 200 OK in 222ms (Views: 169.2ms | ActiveRecord: 40.7ms | Allocations: 1929)
+
+
+Started GET "/cats" for ::1 at 2022-11-11 16:30:10 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (14.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 259.7ms | Allocations: 964)
+  Rendered layout layouts/application.html.erb (Duration: 266.1ms | Allocations: 2474)
+Completed 200 OK in 280ms (Views: 266.0ms | ActiveRecord: 14.0ms | Allocations: 3151)
+
+
+Started GET "/cats" for ::1 at 2022-11-11 16:30:33 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (4.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 294.7ms | Allocations: 964)
+  Rendered layout layouts/application.html.erb (Duration: 306.2ms | Allocations: 2483)
+Completed 200 OK in 309ms (Views: 304.5ms | ActiveRecord: 4.7ms | Allocations: 3181)
+
+
+Started GET "/cats" for ::1 at 2022-11-11 16:30:54 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (108.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 364.2ms | Allocations: 969)
+  Rendered layout layouts/application.html.erb (Duration: 372.3ms | Allocations: 2476)
+Completed 200 OK in 376ms (Views: 266.7ms | ActiveRecord: 108.4ms | Allocations: 3174)
+
+
+Started GET "/cats/1" for ::1 at 2022-11-11 16:37:54 -0800
+Processing by CatsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:20:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 508.5ms | Allocations: 5154)
+  Rendered layout layouts/application.html.erb (Duration: 537.1ms | Allocations: 5248)
+Completed 500 Internal Server Error in 1770ms (ActiveRecord: 460.4ms | Allocations: 15289)
+
+
+
+NameError - undefined local variable or method `users_url' for #<ActionView::Base:0x00000000006d10>:
+  app/views/cats/show.html.erb:11
+  app/controllers/cats_controller.rb:21:in `show'
+
+Started GET "/cats/1" for ::1 at 2022-11-11 16:38:00 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (15.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:20:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 16.9ms | Allocations: 4947)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 5026)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 15.5ms | Allocations: 5787)
+
+
+
+NameError - undefined local variable or method `users_url' for #<ActionView::Base:0x00000000006db0>:
+  app/views/cats/show.html.erb:11
+  app/controllers/cats_controller.rb:21:in `show'
+
+Started POST "/__better_errors/b404e1eebd08e614/variables" for ::1 at 2022-11-11 16:38:02 -0800
+Started GET "/cats/1" for ::1 at 2022-11-11 16:38:14 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (11.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:20:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 208)
+  Rendered layout layouts/application.html.erb (Duration: 96.4ms | Allocations: 1728)
+Completed 200 OK in 202ms (Views: 118.7ms | ActiveRecord: 11.6ms | Allocations: 3015)
+
+
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_test" ENCODING = 'unicode'[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (5.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35mSQL (3.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (55.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (41.7ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "5879262972426de8f0fa224d56dab48cee5ccec6"], ["created_at", "2022-11-12 00:55:19.620533"], ["updated_at", "2022-11-12 00:55:19.620533"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (45.8ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20221111224151)[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-11-12 00:55:19.848782"], ["updated_at", "2022-11-12 00:55:19.848782"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-11-12 00:55:19.853805"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "5879262972426de8f0fa224d56dab48cee5ccec6"], ["created_at", "2022-11-12 00:55:19.861087"], ["updated_at", "2022-11-12 00:55:19.861087"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  [1m[36mCat Create (5.8ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2010-10-10"], ["color", "white"], ["name", "mittens"], ["sex", "M"], ["description", "a cat w/ mittens"], ["created_at", "2022-11-12 00:55:20.131271"], ["updated_at", "2022-11-12 00:55:20.131271"]]
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2008-11-11"], ["color", "grey"], ["name", "boots"], ["sex", "M"], ["description", "a cat w/ boots"], ["created_at", "2022-11-12 00:55:20.139489"], ["updated_at", "2022-11-12 00:55:20.139489"]]
+  [1m[36mCat Create (0.4ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2015-12-12"], ["color", "black"], ["name", "snuggy face"], ["sex", "M"], ["description", "a snuggy cat"], ["created_at", "2022-11-12 00:55:20.142328"], ["updated_at", "2022-11-12 00:55:20.142328"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_test" ENCODING = 'unicode'[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35mSQL (3.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2022-11-12 00:55:36.884696"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-11-12 00:55:36.889811"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Load (4.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  [1m[36mCat Create (0.5ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2010-10-10"], ["color", "white"], ["name", "mittens"], ["sex", "M"], ["description", "a cat w/ mittens"], ["created_at", "2022-11-12 00:55:36.959255"], ["updated_at", "2022-11-12 00:55:36.959255"]]
+  [1m[36mCat Create (0.1ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2008-11-11"], ["color", "grey"], ["name", "boots"], ["sex", "M"], ["description", "a cat w/ boots"], ["created_at", "2022-11-12 00:55:36.960615"], ["updated_at", "2022-11-12 00:55:36.960615"]]
+  [1m[36mCat Create (0.2ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2015-12-12"], ["color", "black"], ["name", "snuggy face"], ["sex", "M"], ["description", "a snuggy cat"], ["created_at", "2022-11-12 00:55:36.961367"], ["updated_at", "2022-11-12 00:55:36.961367"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/cats" for ::1 at 2022-11-11 16:56:30 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (22.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 61.3ms | Allocations: 6928)
+  Rendered layout layouts/application.html.erb (Duration: 77.8ms | Allocations: 13979)
+Completed 200 OK in 83ms (Views: 28.8ms | ActiveRecord: 53.2ms | Allocations: 17239)
+
+
+Started GET "/cats/new" for ::1 at 2022-11-11 16:56:58 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 3699)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3793)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 4121)
+
+
+
+NoMethodError - undefined method `birth_day' for nil:NilClass:
+  app/views/cats/new.html.erb:5
+  app/controllers/cats_controller.rb:12:in `new'
+
+Started POST "/__better_errors/9d2296ee22d386fe/variables" for ::1 at 2022-11-11 16:56:58 -0800
+Started GET "/cats/new" for ::1 at 2022-11-11 16:57:30 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 112.0ms | Allocations: 2868)
+  Rendered layout layouts/application.html.erb (Duration: 112.2ms | Allocations: 2958)
+Completed 500 Internal Server Error in 119ms (ActiveRecord: 0.0ms | Allocations: 3640)
+
+
+
+NoMethodError - undefined method `birth_date' for nil:NilClass:
+  app/views/cats/new.html.erb:5
+  app/controllers/cats_controller.rb:12:in `new'
+
+Started POST "/__better_errors/528de6d8ad4c61eb/variables" for ::1 at 2022-11-11 16:57:31 -0800
+Started GET "/cats/new" for ::1 at 2022-11-11 16:57:46 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 17.9ms | Allocations: 2870)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 2958)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 3633)
+
+
+
+NoMethodError - undefined method `birth_date' for nil:NilClass:
+  app/views/cats/new.html.erb:5
+  app/controllers/cats_controller.rb:12:in `new'
+
+Started POST "/__better_errors/e29869b0e82bb32e/variables" for ::1 at 2022-11-11 16:57:47 -0800
+Started GET "/cats/new" for ::1 at 2022-11-11 16:58:57 -0800
+Processing by CatsController#new as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2423)
+
+
+
+NameError - uninitialized constant CatsController::Cats
+    @cat = Cats.new
+           ^^^^:
+  app/controllers/cats_controller.rb:12:in `new'
+
+Started POST "/__better_errors/227cadd9a9e64431/variables" for ::1 at 2022-11-11 16:58:58 -0800
+Started GET "/cats/new" for ::1 at 2022-11-11 16:59:10 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 289)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 1979)
+Completed 200 OK in 622ms (Views: 16.9ms | ActiveRecord: 586.4ms | Allocations: 5921)
+
+
+Started GET "/cats/new" for ::1 at 2022-11-11 16:59:23 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 263)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 1901)
+Completed 200 OK in 14ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 2617)
+
+
+Started GET "/cats/new" for ::1 at 2022-11-11 17:08:40 -0800
+Processing by CatsController#new as HTML
+Started GET "/cats/new" for ::1 at 2022-11-11 17:08:41 -0800
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 14.5ms | Allocations: 358)
+  Rendered layout layouts/application.html.erb (Duration: 125.1ms | Allocations: 2031)
+Completed 200 OK in 483ms (Views: 134.9ms | ActiveRecord: 207.9ms | Allocations: 9144)
+
+
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1627)
+Completed 200 OK in 162ms (Views: 2.8ms | ActiveRecord: 150.3ms | Allocations: 5257)
+
+
+Started GET "/cats/new" for ::1 at 2022-11-11 17:09:27 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 331)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 1988)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 2714)
+
+
+Started GET "/cats/new" for ::1 at 2022-11-11 17:10:13 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 328)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 1987)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.0ms | Allocations: 2704)
+
+
+Started GET "/cats/new" for ::1 at 2022-11-11 17:18:37 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 21.6ms | Allocations: 331)
+  Rendered layout layouts/application.html.erb (Duration: 76.4ms | Allocations: 1968)
+Completed 200 OK in 172ms (Views: 159.4ms | Allocations: 2676)
+
+
+Started GET "/cats/new" for ::1 at 2022-11-11 17:28:20 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 48.0ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 438.7ms | Allocations: 1314)
+Completed 200 OK in 568ms (Views: 493.3ms | Allocations: 1541)
+
+
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_test" ENCODING = 'unicode'[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (9.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (35.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (123.9ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (18.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  [1m[35m (25.7ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying(1) NOT NULL, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2022-11-12 21:55:00.270540"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (2.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-11-12 21:55:00.275857"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  [1m[36mCat Create (0.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2010-10-10"], ["color", "white"], ["name", "mittens"], ["sex", "M"], ["description", "a cat w/ mittens"], ["created_at", "2022-11-12 21:55:00.379729"], ["updated_at", "2022-11-12 21:55:00.379729"]]
+  [1m[36mCat Create (0.2ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2008-11-11"], ["color", "grey"], ["name", "boots"], ["sex", "M"], ["description", "a cat w/ boots"], ["created_at", "2022-11-12 21:55:00.381688"], ["updated_at", "2022-11-12 21:55:00.381688"]]
+  [1m[36mCat Create (0.2ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2015-12-12"], ["color", "black"], ["name", "snuggy face"], ["sex", "M"], ["description", "a snuggy cat"], ["created_at", "2022-11-12 21:55:00.382707"], ["updated_at", "2022-11-12 21:55:00.382707"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2022-11-12 13:56:05 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (6.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 20.1ms | Allocations: 6922)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 10602)
+Completed 200 OK in 33ms (Views: 20.3ms | ActiveRecord: 11.4ms | Allocations: 13863)
+
+
+Started GET "/new" for ::1 at 2022-11-12 13:56:15 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/cats/new" for ::1 at 2022-11-12 13:56:38 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 357)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 1708)
+Completed 200 OK in 34ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 2063)
+
+
+Started POST "/cats" for ::1 at 2022-11-12 14:16:44 -0800
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"birth_date"=>"2022-11-01", "name"=>"faker", "sex"=>"F", "color"=>"black"}, "cats"=>{"description"=>"kiss kiss"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:19:in `create'
+  [1m[36mCat Create (55.6ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2022-11-01"], ["color", "black"], ["name", "faker"], ["sex", "F"], ["description", nil], ["created_at", "2022-11-12 22:16:45.070377"], ["updated_at", "2022-11-12 22:16:45.070377"]]
+  ↳ app/controllers/cats_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (95.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:19:in `create'
+Redirected to http://localhost:3000/cats/4
+Completed 302 Found in 300ms (ActiveRecord: 230.9ms | Allocations: 10407)
+
+
+Started GET "/cats/4" for ::1 at 2022-11-12 14:16:45 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 1735)
+Completed 200 OK in 29ms (Views: 17.6ms | ActiveRecord: 1.1ms | Allocations: 5847)
+
+
+Started GET "/cats/new" for ::1 at 2022-11-12 14:19:21 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 332)
+  Rendered layout layouts/application.html.erb (Duration: 45.3ms | Allocations: 1985)
+Completed 200 OK in 98ms (Views: 70.8ms | ActiveRecord: 0.0ms | Allocations: 2702)
+
+
+Started POST "/cats" for ::1 at 2022-11-12 14:19:37 -0800
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"birth_date"=>"", "name"=>"fakey", "sex"=>"M", "color"=>"white", "description"=>"other half"}}
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 0.0ms | Allocations: 1108)
+
+
+
+Date::Error - invalid date:
+  app/models/cat.rb:29:in `birth_date_cannot_be_future'
+  app/controllers/cats_controller.rb:19:in `create'
+
+Started POST "/__better_errors/ca783787b4c61133/variables" for ::1 at 2022-11-12 14:19:38 -0800
+Started GET "/cats/new" for ::1 at 2022-11-12 14:19:50 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 65)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 1497)
+Completed 200 OK in 38ms (Views: 32.8ms | ActiveRecord: 0.0ms | Allocations: 1767)
+
+
+Started POST "/cats" for ::1 at 2022-11-12 14:20:02 -0800
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"birth_date"=>"2022-11-03", "name"=>"fakey", "sex"=>"F", "color"=>"white", "description"=>"other half"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:19:in `create'
+  [1m[36mCat Create (51.8ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2022-11-03"], ["color", "white"], ["name", "fakey"], ["sex", "F"], ["description", "other half"], ["created_at", "2022-11-12 22:20:02.757952"], ["updated_at", "2022-11-12 22:20:02.757952"]]
+  ↳ app/controllers/cats_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (25.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:19:in `create'
+Redirected to http://localhost:3000/cats/5
+Completed 302 Found in 183ms (ActiveRecord: 77.3ms | Allocations: 2161)
+
+
+Started GET "/cats/5" for ::1 at 2022-11-12 14:20:02 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (42.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 188)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1445)
+Completed 200 OK in 57ms (Views: 8.3ms | ActiveRecord: 42.8ms | Allocations: 2235)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:20:52 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (89.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 119.2ms | Allocations: 942)
+  Rendered layout layouts/application.html.erb (Duration: 126.1ms | Allocations: 2247)
+Completed 200 OK in 143ms (Views: 48.1ms | ActiveRecord: 89.8ms | Allocations: 2504)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:23:02 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (9.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 70.0ms | Allocations: 1036)
+  Rendered layout layouts/application.html.erb (Duration: 89.6ms | Allocations: 2704)
+Completed 200 OK in 117ms (Views: 106.8ms | ActiveRecord: 9.4ms | Allocations: 3385)
+
+
+Started GET "/cats/2" for ::1 at 2022-11-12 14:23:10 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (29.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 56.5ms | Allocations: 5940)
+  Rendered layout layouts/application.html.erb (Duration: 56.7ms | Allocations: 6032)
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 29.4ms | Allocations: 6847)
+
+
+
+NameError - undefined local variable or method `users_url' for #<ActionView::Base:0x00000000005898>:
+  app/views/cats/show.html.erb:7
+  app/controllers/cats_controller.rb:9:in `show'
+
+Started POST "/__better_errors/5c06b8b61379b1b1/variables" for ::1 at 2022-11-12 14:23:10 -0800
+Started GET "/cats/2" for ::1 at 2022-11-12 14:24:33 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (13.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 1941)
+Completed 200 OK in 50ms (Views: 14.2ms | ActiveRecord: 13.9ms | Allocations: 3230)
+
+
+Started GET "/cats/2" for ::1 at 2022-11-12 14:24:43 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 1927)
+Completed 200 OK in 18ms (Views: 11.8ms | ActiveRecord: 0.5ms | Allocations: 3192)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:24:44 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 963)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 2244)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.4ms | Allocations: 2519)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:26:29 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 52.1ms | Allocations: 1227)
+  Rendered layout layouts/application.html.erb (Duration: 57.2ms | Allocations: 2909)
+Completed 200 OK in 70ms (Views: 65.3ms | ActiveRecord: 0.6ms | Allocations: 3587)
+
+
+Started GET "/cats/1" for ::1 at 2022-11-12 14:26:39 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 1492)
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 1.0ms | Allocations: 2286)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:26:55 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (6.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 1224)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 2849)
+Completed 200 OK in 29ms (Views: 20.4ms | ActiveRecord: 6.3ms | Allocations: 3528)
+
+
+Started GET "/cats/1" for ::1 at 2022-11-12 14:26:57 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (22.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 1469)
+Completed 200 OK in 32ms (Views: 7.3ms | ActiveRecord: 22.6ms | Allocations: 2263)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:27:00 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (6.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 863)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 2137)
+Completed 200 OK in 17ms (Views: 10.0ms | ActiveRecord: 6.4ms | Allocations: 2339)
+
+
+Started GET "/cats/2" for ::1 at 2022-11-12 14:27:01 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1320)
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.6ms | Allocations: 2013)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:27:03 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 863)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 2125)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.7ms | Allocations: 2325)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:29:20 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (7.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 32.1ms | Allocations: 1227)
+  Rendered layout layouts/application.html.erb (Duration: 38.7ms | Allocations: 2885)
+Completed 200 OK in 57ms (Views: 43.6ms | ActiveRecord: 7.2ms | Allocations: 3563)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:29:33 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (9.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 1030)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 2708)
+Completed 200 OK in 35ms (Views: 24.1ms | ActiveRecord: 9.8ms | Allocations: 3408)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:30:13 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (13.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/index.html.erb within layouts/application (Duration: 21.3ms | Allocations: 1208)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 2857)
+Completed 200 OK in 27ms (Views: 13.5ms | ActiveRecord: 13.2ms | Allocations: 3556)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:30:54 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/index.html.erb within layouts/application (Duration: 324.6ms | Allocations: 5339)
+  Rendered layout layouts/application.html.erb (Duration: 325.1ms | Allocations: 5427)
+Completed 500 Internal Server Error in 356ms (ActiveRecord: 0.0ms | Allocations: 6114)
+
+
+
+NameError - undefined local variable or method `cat' for #<ActionView::Base:0x00000000005ed8>
+Did you mean?  @cats:
+  app/views/cats/index.html.erb:3
+  app/controllers/cats_controller.rb:4:in `index'
+
+Started POST "/__better_errors/15dbed989c318cc5/variables" for ::1 at 2022-11-12 14:30:54 -0800
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):72:in `block in render'
+  [1m[36mCACHE Cat Load (0.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):72:in `block in render'
+Started GET "/cats" for ::1 at 2022-11-12 14:32:10 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (9.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 34.8ms | Allocations: 1214)
+  Rendered layout layouts/application.html.erb (Duration: 48.5ms | Allocations: 2888)
+Completed 200 OK in 55ms (Views: 43.8ms | ActiveRecord: 9.1ms | Allocations: 3587)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:32:26 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (5.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 16.8ms | Allocations: 1207)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 2864)
+Completed 200 OK in 29ms (Views: 22.2ms | ActiveRecord: 5.6ms | Allocations: 3562)
+
+
+Started GET "/cats/1" for ::1 at 2022-11-12 14:32:27 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 1483)
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 2276)
+
+
+Started GET "/cats/1" for ::1 at 2022-11-12 14:32:29 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1319)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.3ms | Allocations: 2012)
+
+
+Started GET "/cats/1" for ::1 at 2022-11-12 14:32:31 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 1343)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 2036)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:34:11 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 1209)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 2885)
+Completed 200 OK in 45ms (Views: 42.5ms | ActiveRecord: 0.8ms | Allocations: 3564)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:34:30 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (24.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 61.6ms | Allocations: 1209)
+  Rendered layout layouts/application.html.erb (Duration: 68.4ms | Allocations: 2869)
+Completed 200 OK in 72ms (Views: 47.1ms | ActiveRecord: 24.5ms | Allocations: 3568)
+
+
+Started GET "/cats/1" for ::1 at 2022-11-12 14:34:39 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (12.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 92.9ms | Allocations: 1481)
+Completed 200 OK in 108ms (Views: 93.9ms | ActiveRecord: 12.7ms | Allocations: 2276)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:34:40 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 858)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 2110)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.6ms | Allocations: 2312)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:38:58 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (12.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 51.5ms | Allocations: 1257)
+  Rendered layout layouts/application.html.erb (Duration: 62.9ms | Allocations: 2917)
+Completed 200 OK in 113ms (Views: 93.5ms | ActiveRecord: 12.7ms | Allocations: 3594)
+
+
+Started GET "/cats/new" for ::1 at 2022-11-12 14:39:00 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 276)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 1555)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.0ms | Allocations: 1840)
+
+
+Started POST "/cats" for ::1 at 2022-11-12 14:39:20 -0800
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"birth_date"=>"2022-11-08", "name"=>"wewe", "sex"=>"F", "color"=>"chocolate", "description"=>"wew wewe wewe"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:19:in `create'
+  [1m[36mCat Create (54.2ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2022-11-08"], ["color", "chocolate"], ["name", "wewe"], ["sex", "F"], ["description", "wew wewe wewe"], ["created_at", "2022-11-12 22:39:20.075332"], ["updated_at", "2022-11-12 22:39:20.075332"]]
+  ↳ app/controllers/cats_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (19.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:19:in `create'
+Redirected to http://localhost:3000/cats/6
+Completed 302 Found in 102ms (ActiveRecord: 73.6ms | Allocations: 2111)
+
+
+Started GET "/cats/6" for ::1 at 2022-11-12 14:39:20 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 213)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1487)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 2245)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:39:24 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (9.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 939)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 2216)
+Completed 200 OK in 21ms (Views: 10.8ms | ActiveRecord: 9.3ms | Allocations: 2418)
+
+
+Started GET "/cats/6" for ::1 at 2022-11-12 14:39:29 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 1316)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.3ms | Allocations: 2008)
+
+
+Started GET "/cats/new" for ::1 at 2022-11-12 14:40:34 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 328)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 1986)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 2677)
+
+
+Started GET "/cats/edit" for ::1 at 2022-11-12 14:47:05 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mCat Load (2.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2833)
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 114.2ms | Allocations: 9332)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/cats/show.html.erb:1
+  app/controllers/cats_controller.rb:9:in `show'
+
+Started POST "/__better_errors/183618de8c247449/variables" for ::1 at 2022-11-12 14:47:06 -0800
+Started GET "/cats/1/edit" for ::1 at 2022-11-12 14:47:25 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (43.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 2094)
+Completed 200 OK in 76ms (Views: 20.1ms | ActiveRecord: 43.2ms | Allocations: 4677)
+
+
+Started GET "/cats/1/edit" for ::1 at 2022-11-12 14:47:50 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 1.0ms | Allocations: 381)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2039)
+Completed 200 OK in 21ms (Views: 11.5ms | ActiveRecord: 0.6ms | Allocations: 3216)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:47:59 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 1254)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 2528)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.9ms | Allocations: 2803)
+
+
+Started GET "/cats/new" for ::1 at 2022-11-12 14:48:02 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 271)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 1547)
+Completed 200 OK in 14ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 1819)
+
+
+Started GET "/cats/1/edit" for ::1 at 2022-11-12 14:48:09 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 1355)
+Completed 200 OK in 44ms (Views: 16.9ms | ActiveRecord: 1.0ms | Allocations: 2073)
+
+
+Started GET "/cats/2/edit" for ::1 at 2022-11-12 14:48:16 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 0.8ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1331)
+Completed 200 OK in 22ms (Views: 5.8ms | ActiveRecord: 0.7ms | Allocations: 2022)
+
+
+Started GET "/cats/3/edit" for ::1 at 2022-11-12 14:48:20 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (23.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 0.9ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 1358)
+Completed 200 OK in 41ms (Views: 7.7ms | ActiveRecord: 23.1ms | Allocations: 2049)
+
+
+Started GET "/cats/4/edit" for ::1 at 2022-11-12 14:48:24 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCat Load (8.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 0.5ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1325)
+Completed 200 OK in 25ms (Views: 4.8ms | ActiveRecord: 8.2ms | Allocations: 2015)
+
+
+Started GET "/cats/4/edit" for ::1 at 2022-11-12 14:51:19 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCat Load (7.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 7.8ms | Allocations: 402)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 2051)
+Completed 200 OK in 71ms (Views: 49.0ms | ActiveRecord: 7.4ms | Allocations: 3227)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 14:51:27 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (16.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 31.7ms | Allocations: 1221)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 2492)
+Completed 200 OK in 35ms (Views: 18.3ms | ActiveRecord: 16.3ms | Allocations: 2766)
+
+
+Started GET "/cats/4" for ::1 at 2022-11-12 14:51:37 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCat Load (6.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 212)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 1486)
+Completed 200 OK in 25ms (Views: 8.5ms | ActiveRecord: 6.2ms | Allocations: 2258)
+
+
+Started GET "/cats/4/edit" for ::1 at 2022-11-12 14:51:45 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCat Load (10.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 86)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 1354)
+Completed 200 OK in 26ms (Views: 7.8ms | ActiveRecord: 10.7ms | Allocations: 2045)
+
+
+Started GET "/cats/4/edit" for ::1 at 2022-11-12 14:52:01 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCat Load (5.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 29.0ms | Allocations: 5465)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 5553)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 5.5ms | Allocations: 6709)
+
+
+
+NameError - undefined local variable or method `checked' for #<ActionView::Base:0x00000000007558>
+Did you mean?  check_box:
+  app/views/cats/edit.html.erb:13
+  app/controllers/cats_controller.rb:29:in `edit'
+
+Started POST "/__better_errors/e6609c66c67aeaef/variables" for ::1 at 2022-11-12 14:52:01 -0800
+Started GET "/cats/1/edit" for ::1 at 2022-11-12 14:52:26 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (5.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 11.6ms | Allocations: 5147)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 5227)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 5.2ms | Allocations: 6032)
+
+
+
+NameError - undefined local variable or method `checked' for #<ActionView::Base:0x000000000075f8>
+Did you mean?  check_box:
+  app/views/cats/edit.html.erb:11
+  app/controllers/cats_controller.rb:29:in `edit'
+
+Started POST "/__better_errors/4030f16069a8c488/variables" for ::1 at 2022-11-12 14:52:26 -0800
+Started GET "/cats/1/edit" for ::1 at 2022-11-12 14:54:09 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (13.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 12.7ms | Allocations: 5461)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5549)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 13.9ms | Allocations: 6806)
+
+
+
+NameError - undefined local variable or method `checked' for #<ActionView::Base:0x000000000076e8>
+Did you mean?  check_box:
+  app/views/cats/edit.html.erb:11
+  app/controllers/cats_controller.rb:29:in `edit'
+
+Started POST "/__better_errors/687ee9ff89dec1d2/variables" for ::1 at 2022-11-12 14:54:10 -0800
+Started GET "/cats/1/edit" for ::1 at 2022-11-12 14:56:43 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (2.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 514)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 2155)
+Completed 200 OK in 64ms (Views: 37.2ms | ActiveRecord: 2.9ms | Allocations: 3435)
+
+
+Started GET "/cats/4/edit" for ::1 at 2022-11-12 14:56:49 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCat Load (14.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 0.4ms | Allocations: 87)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 1374)
+Completed 200 OK in 25ms (Views: 7.7ms | ActiveRecord: 14.5ms | Allocations: 2152)
+
+
+Started GET "/cats/4/edit" for ::1 at 2022-11-12 15:00:25 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCat Load (7.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 6.4ms | Allocations: 522)
+  Rendered layout layouts/application.html.erb (Duration: 60.6ms | Allocations: 2189)
+Completed 200 OK in 144ms (Views: 72.0ms | ActiveRecord: 7.4ms | Allocations: 3367)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:00:33 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 4.3ms | Allocations: 89)
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 1351)
+Completed 200 OK in 51ms (Views: 37.6ms | ActiveRecord: 0.3ms | Allocations: 2130)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:01:15 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (6.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 536)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 2191)
+Completed 200 OK in 29ms (Views: 14.4ms | ActiveRecord: 6.3ms | Allocations: 3369)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:01:17 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 0.6ms | Allocations: 90)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1370)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 2149)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:02:48 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 520)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 2175)
+Completed 200 OK in 36ms (Views: 24.0ms | ActiveRecord: 0.9ms | Allocations: 3353)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:03:01 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 36.7ms | Allocations: 520)
+  Rendered layout layouts/application.html.erb (Duration: 45.5ms | Allocations: 2166)
+Completed 200 OK in 59ms (Views: 51.6ms | ActiveRecord: 0.5ms | Allocations: 3431)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:04:33 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (6.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 4.5ms | Allocations: 521)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 2182)
+Completed 200 OK in 64ms (Views: 29.1ms | ActiveRecord: 6.4ms | Allocations: 3447)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:04:35 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (9.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 0.5ms | Allocations: 89)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1351)
+Completed 200 OK in 21ms (Views: 5.2ms | ActiveRecord: 9.3ms | Allocations: 2130)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:05:06 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 2.0ms | Allocations: 520)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2175)
+Completed 200 OK in 21ms (Views: 12.2ms | ActiveRecord: 0.6ms | Allocations: 3353)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 15:05:11 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (17.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 31.6ms | Allocations: 1221)
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 2495)
+Completed 200 OK in 39ms (Views: 20.9ms | ActiveRecord: 17.5ms | Allocations: 2770)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:05:26 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 0.8ms | Allocations: 89)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 1363)
+Completed 200 OK in 21ms (Views: 8.9ms | ActiveRecord: 0.5ms | Allocations: 2084)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:05:59 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (46.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 12.7ms | Allocations: 523)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 2160)
+Completed 200 OK in 90ms (Views: 36.8ms | ActiveRecord: 46.7ms | Allocations: 3338)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:06:01 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (1.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 0.4ms | Allocations: 89)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1354)
+Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 1.0ms | Allocations: 2133)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:06:13 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 0.4ms | Allocations: 89)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1375)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.2ms | Allocations: 2067)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:07:26 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (6.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 3.0ms | Allocations: 537)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 2192)
+Completed 200 OK in 38ms (Views: 24.7ms | ActiveRecord: 6.9ms | Allocations: 3370)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:07:28 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 0.4ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 1344)
+Completed 200 OK in 19ms (Views: 13.5ms | ActiveRecord: 0.8ms | Allocations: 2123)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:07:50 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 536)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2197)
+Completed 200 OK in 30ms (Views: 24.5ms | ActiveRecord: 0.3ms | Allocations: 3376)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:08:01 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 536)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 2179)
+Completed 200 OK in 23ms (Views: 15.4ms | ActiveRecord: 0.5ms | Allocations: 3444)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:08:18 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 4.2ms | Allocations: 550)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 2184)
+Completed 200 OK in 30ms (Views: 17.6ms | ActiveRecord: 0.7ms | Allocations: 3449)
+
+
+Started GET "/cats/1/edit" for ::1 at 2022-11-12 15:08:30 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 2.0ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 1351)
+Completed 200 OK in 19ms (Views: 9.1ms | ActiveRecord: 0.4ms | Allocations: 2130)
+
+
+Started GET "/cats/1/edit" for ::1 at 2022-11-12 15:08:39 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 536)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 2173)
+Completed 200 OK in 27ms (Views: 16.6ms | ActiveRecord: 0.5ms | Allocations: 3351)
+
+
+Started PATCH "/cats.1" for ::1 at 2022-11-12 15:08:44 -0800
+  
+ActionController::RoutingError (No route matches [PATCH] "/cats.1"):
+  
+Started GET "/cats/1/edit" for ::1 at 2022-11-12 15:12:42 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (25.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 614)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 2255)
+Completed 200 OK in 99ms (Views: 33.1ms | ActiveRecord: 25.7ms | Allocations: 3518)
+
+
+Started GET "/cats/1/edit" for ::1 at 2022-11-12 15:12:56 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 606)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2286)
+Completed 200 OK in 16ms (Views: 10.4ms | ActiveRecord: 0.3ms | Allocations: 3552)
+
+
+Started GET "/cats/1/edit" for ::1 at 2022-11-12 15:13:02 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (20.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 0.5ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 1350)
+Completed 200 OK in 35ms (Views: 7.6ms | ActiveRecord: 20.2ms | Allocations: 2129)
+
+
+Started GET "/cats/4/edit" for ::1 at 2022-11-12 15:13:07 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1347)
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 2038)
+
+
+Started GET "/cats/5/edit" for ::1 at 2022-11-12 15:13:11 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 0.7ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1379)
+Completed 200 OK in 13ms (Views: 5.2ms | ActiveRecord: 0.7ms | Allocations: 2071)
+
+
+Started GET "/cats/6/edit" for ::1 at 2022-11-12 15:13:16 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 0.3ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1349)
+Completed 200 OK in 9ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 2041)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 15:19:43 -0800
+
+SyntaxError - syntax error, unexpected ':', expecting `end'
+      render: cat_url(@cat.id)
+            ^:
+  app/controllers/cats_controller.rb:36:in `'
+
+Started POST "/__better_errors/d2586b89adb9c997/variables" for ::1 at 2022-11-12 15:19:43 -0800
+Started GET "/cats" for ::1 at 2022-11-12 15:20:10 -0800
+
+SyntaxError - syntax error, unexpected ':', expecting `end'
+      redirect_to: cat_url(@cat.id)
+                 ^:
+  app/controllers/cats_controller.rb:36:in `'
+
+Started POST "/__better_errors/a6d141fa34cb41a8/variables" for ::1 at 2022-11-12 15:20:10 -0800
+Started GET "/cats" for ::1 at 2022-11-12 15:20:25 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (18.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 158.8ms | Allocations: 6343)
+  Rendered layout layouts/application.html.erb (Duration: 210.9ms | Allocations: 8029)
+Completed 200 OK in 230ms (Views: 214.0ms | ActiveRecord: 109.3ms | Allocations: 9692)
+
+
+Started GET "/cats/1" for ::1 at 2022-11-12 15:20:27 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 217)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1497)
+Completed 200 OK in 28ms (Views: 2.6ms | ActiveRecord: 0.5ms | Allocations: 3239)
+
+
+Started GET "/cats/%3C%=%20edit_cat(@cat.id)" for ::1 at 2022-11-12 15:20:29 -0800
+Processing by CatsController#show as */*
+  Parameters: {"id"=>"<%= edit_cat(@cat"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 42.3ms | Allocations: 2610)
+  Rendered layout layouts/application.html.erb (Duration: 42.4ms | Allocations: 2689)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.4ms | Allocations: 3445)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/cats/show.html.erb:1
+  app/controllers/cats_controller.rb:9:in `show'
+
+Started POST "/__better_errors/dd0cc8f042bae8e6/variables" for ::1 at 2022-11-12 15:20:29 -0800
+Started GET "/cats/%3C%=%20edit_cat(@cat.id)" for ::1 at 2022-11-12 15:21:01 -0800
+Processing by CatsController#show as */*
+  Parameters: {"id"=>"<%= edit_cat(@cat"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 12.5ms | Allocations: 2609)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 2689)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.4ms | Allocations: 3483)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/cats/show.html.erb:1
+  app/controllers/cats_controller.rb:9:in `show'
+
+Started POST "/__better_errors/e26f8380c1455a48/variables" for ::1 at 2022-11-12 15:21:01 -0800
+Started GET "/cats/%3C%=%20edit_cat(@cat.id)" for ::1 at 2022-11-12 15:21:29 -0800
+Processing by CatsController#show as */*
+  Parameters: {"id"=>"<%= edit_cat(@cat"}
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 14.1ms | Allocations: 2801)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 2889)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.8ms | Allocations: 4210)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/cats/show.html.erb:1
+  app/controllers/cats_controller.rb:9:in `show'
+
+Started POST "/__better_errors/18ecf4173cb1c495/variables" for ::1 at 2022-11-12 15:21:29 -0800
+Started GET "/cats/%3C%=%20edit_cat(@cat.id)" for ::1 at 2022-11-12 15:21:32 -0800
+Processing by CatsController#show as */*
+  Parameters: {"id"=>"<%= edit_cat(@cat"}
+  [1m[36mCat Load (4.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2611)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2691)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 4.0ms | Allocations: 3486)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/cats/show.html.erb:1
+  app/controllers/cats_controller.rb:9:in `show'
+
+Started POST "/__better_errors/0c656990e575d48e/variables" for ::1 at 2022-11-12 15:21:32 -0800
+Started POST "/__better_errors/0c656990e575d48e/variables" for ::1 at 2022-11-12 15:22:37 -0800
+Started GET "/cats/%3C%=%20edit_cat(@cat.id)" for ::1 at 2022-11-12 15:22:58 -0800
+Processing by CatsController#show as */*
+  Parameters: {"id"=>"<%= edit_cat(@cat"}
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 21.8ms | Allocations: 2798)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 2886)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.7ms | Allocations: 4207)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/cats/show.html.erb:1
+  app/controllers/cats_controller.rb:9:in `show'
+
+Started POST "/__better_errors/5805c051ac821646/variables" for ::1 at 2022-11-12 15:22:58 -0800
+Started GET "/cats" for ::1 at 2022-11-12 15:23:03 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (46.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 90.4ms | Allocations: 1280)
+  Rendered layout layouts/application.html.erb (Duration: 113.5ms | Allocations: 2931)
+Completed 200 OK in 123ms (Views: 72.4ms | ActiveRecord: 46.5ms | Allocations: 3266)
+
+
+Started GET "/cats/2" for ::1 at 2022-11-12 15:23:05 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 1327)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.4ms | Allocations: 2047)
+
+
+Started GET "/cats/%3C%=%20edit_cat" for ::1 at 2022-11-12 15:23:06 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"<%= edit_cat"}
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2609)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2688)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.9ms | Allocations: 3356)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/cats/show.html.erb:1
+  app/controllers/cats_controller.rb:9:in `show'
+
+Started POST "/__better_errors/1c7bd220abd7de5e/variables" for ::1 at 2022-11-12 15:23:06 -0800
+Started GET "/cats/%3C%=%20edit_cat" for ::1 at 2022-11-12 15:24:34 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"<%= edit_cat"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2814)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 2902)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.4ms | Allocations: 4144)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/cats/show.html.erb:1
+  app/controllers/cats_controller.rb:9:in `show'
+
+Started POST "/__better_errors/68fe46a07cea7a05/variables" for ::1 at 2022-11-12 15:24:35 -0800
+Started POST "/__better_errors/68fe46a07cea7a05/variables" for ::1 at 2022-11-12 15:24:38 -0800
+Started GET "/cats/1" for ::1 at 2022-11-12 15:24:45 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (20.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 22.6ms | Allocations: 4877)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 4957)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 20.7ms | Allocations: 5762)
+
+
+
+NoMethodError - undefined method `edit_cat' for #<ActionView::Base:0x0000000000aaf0>
+Did you mean?  edit_cat_url:
+  app/views/cats/show.html.erb:9
+  app/controllers/cats_controller.rb:9:in `show'
+
+Started POST "/__better_errors/e2ca673d85a010f4/variables" for ::1 at 2022-11-12 15:24:46 -0800
+Started GET "/cats/1" for ::1 at 2022-11-12 15:24:58 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (11.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 10.0ms | Allocations: 322)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 1985)
+Completed 200 OK in 65ms (Views: 36.7ms | ActiveRecord: 11.3ms | Allocations: 3265)
+
+
+Started GET "/cats/1/edit" for ::1 at 2022-11-12 15:24:59 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 519)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1778)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 2610)
+
+
+Started GET "/cats/2" for ::1 at 2022-11-12 15:25:03 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 83)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 1351)
+Completed 200 OK in 37ms (Views: 20.0ms | ActiveRecord: 0.9ms | Allocations: 2043)
+
+
+Started GET "/cats/2/edit" for ::1 at 2022-11-12 15:25:04 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/edit.html.erb within layouts/application (Duration: 0.4ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1341)
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 2032)
+
+
+Started PATCH "/cats/2" for ::1 at 2022-11-12 15:25:10 -0800
+Processing by CatsController#update as HTML
+  Parameters: {"cat"=>{"birth_date"=>"2008-11-11", "name"=>"boots", "sex"=>"M", "description"=>"a cat w/ shoes"}, "id"=>"2"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:35:in `update'
+  [1m[36mCat Update (35.3ms)[0m  [1m[33mUPDATE "cats" SET "description" = $1, "updated_at" = $2 WHERE "cats"."id" = $3[0m  [["description", "a cat w/ shoes"], ["updated_at", "2022-11-12 23:25:10.563741"], ["id", 2]]
+  ↳ app/controllers/cats_controller.rb:35:in `update'
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:35:in `update'
+Redirected to http://localhost:3000/cats/2
+Completed 302 Found in 99ms (ActiveRecord: 51.1ms | Allocations: 2929)
+
+
+Started GET "/cats/2" for ::1 at 2022-11-12 15:25:10 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (25.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 83)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1345)
+Completed 200 OK in 30ms (Views: 2.6ms | ActiveRecord: 25.5ms | Allocations: 2036)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 15:25:17 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 1173)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 2434)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.5ms | Allocations: 2688)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 15:35:38 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (8.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 203.4ms | Allocations: 4327)
+  Rendered layout layouts/application.html.erb (Duration: 220.6ms | Allocations: 5948)
+Completed 200 OK in 289ms (Views: 282.4ms | ActiveRecord: 93.3ms | Allocations: 6621)
+
+
+Started GET "/cats/new" for ::1 at 2022-11-12 15:35:41 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 4.0ms | Allocations: 656)
+  Rendered cats/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 859)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 2130)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 2423)
+
+
+Started GET "/cats/3" for ::1 at 2022-11-12 15:36:56 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (12.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 255)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 1526)
+Completed 200 OK in 199ms (Views: 31.4ms | ActiveRecord: 35.2ms | Allocations: 2326)
+
+
+Started GET "/cats/3/edit" for ::1 at 2022-11-12 15:36:58 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 2.2ms | Allocations: 82)
+  Rendered cats/edit.html.erb within layouts/application (Duration: 4.0ms | Allocations: 227)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 1498)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.4ms | Allocations: 2243)
+
+
+Started GET "/cats/3/edit" for ::1 at 2022-11-12 15:38:16 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (21.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 4.1ms | Allocations: 701)
+  Rendered cats/edit.html.erb within layouts/application (Duration: 6.1ms | Allocations: 940)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 2581)
+Completed 200 OK in 100ms (Views: 31.0ms | ActiveRecord: 21.8ms | Allocations: 3757)
+
+
+Started GET "/cats/3/edit" for ::1 at 2022-11-12 15:38:24 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (10.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 2.0ms | Allocations: 699)
+  Rendered cats/edit.html.erb within layouts/application (Duration: 13.3ms | Allocations: 938)
+  Rendered layout layouts/application.html.erb (Duration: 33.8ms | Allocations: 2600)
+Completed 200 OK in 69ms (Views: 39.9ms | ActiveRecord: 10.9ms | Allocations: 3863)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 15:38:40 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 41.1ms | Allocations: 1217)
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | Allocations: 2497)
+Completed 200 OK in 51ms (Views: 47.1ms | ActiveRecord: 0.8ms | Allocations: 2771)
+
+
+Started GET "/cats/new" for ::1 at 2022-11-12 15:38:41 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 0.2ms | Allocations: 64)
+  Rendered cats/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 203)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 1485)
+Completed 200 OK in 140ms (Views: 138.1ms | ActiveRecord: 0.0ms | Allocations: 1750)
+
+
+Started GET "/cats/new" for ::1 at 2022-11-12 15:38:56 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 1.0ms | Allocations: 662)
+  Rendered cats/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 900)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 2550)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.0ms | Allocations: 3240)
+
+
+Started GET "/cats/new" for ::1 at 2022-11-12 15:39:06 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 0.6ms | Allocations: 60)
+  Rendered cats/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 1393)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 1624)
+
+
+Started GET "/cats/3" for ::1 at 2022-11-12 15:39:09 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (7.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 264)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1514)
+Completed 200 OK in 24ms (Views: 5.4ms | ActiveRecord: 7.8ms | Allocations: 2328)
+
+
+Started GET "/cats/3/edit" for ::1 at 2022-11-12 15:39:10 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 0.7ms | Allocations: 82)
+  Rendered cats/edit.html.erb within layouts/application (Duration: 3.9ms | Allocations: 227)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 1507)
+Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 0.3ms | Allocations: 2253)
+
+
+Started GET "/cats/new" for ::1 at 2022-11-12 15:39:34 -0800
+Processing by CatsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 6.8ms | Allocations: 662)
+  Rendered cats/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 895)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 2553)
+Completed 200 OK in 35ms (Views: 28.8ms | ActiveRecord: 0.0ms | Allocations: 3244)
+
+
+Started GET "/cats/3" for ::1 at 2022-11-12 15:40:14 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 264)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 1520)
+Completed 200 OK in 59ms (Views: 12.5ms | ActiveRecord: 0.7ms | Allocations: 2356)
+
+
+Started GET "/cats/3/edit" for ::1 at 2022-11-12 15:40:16 -0800
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 0.3ms | Allocations: 82)
+  Rendered cats/edit.html.erb within layouts/application (Duration: 3.5ms | Allocations: 227)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 1495)
+Completed 200 OK in 14ms (Views: 6.6ms | ActiveRecord: 0.4ms | Allocations: 2241)
+
+
+Started PATCH "/cats/3" for ::1 at 2022-11-12 15:40:30 -0800
+Processing by CatsController#update as HTML
+  Parameters: {"cat"=>{"name"=>"snuggy face", "birth_date"=>"2015-12-12", "sex"=>"M", "description"=>"a snuggy, fluffy cat"}, "id"=>"3"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:35:in `update'
+  [1m[36mCat Update (135.6ms)[0m  [1m[33mUPDATE "cats" SET "description" = $1, "updated_at" = $2 WHERE "cats"."id" = $3[0m  [["description", "a snuggy, fluffy cat"], ["updated_at", "2022-11-12 23:40:30.709133"], ["id", 3]]
+  ↳ app/controllers/cats_controller.rb:35:in `update'
+  [1m[36mTRANSACTION (24.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:35:in `update'
+Redirected to http://localhost:3000/cats/3
+Completed 302 Found in 211ms (ActiveRecord: 160.5ms | Allocations: 2620)
+
+
+Started GET "/cats/3" for ::1 at 2022-11-12 15:40:30 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 83)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1351)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.2ms | Allocations: 2043)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 15:40:33 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 24.7ms | Allocations: 1172)
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 2454)
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.7ms | Allocations: 2709)
+
+
+Started GET "/cats/3" for ::1 at 2022-11-12 15:40:45 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (8.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 83)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 1336)
+Completed 200 OK in 31ms (Views: 17.0ms | ActiveRecord: 8.1ms | Allocations: 2028)
+
+
+Started GET "/cats/3" for ::1 at 2022-11-12 15:41:18 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 1978)
+Completed 200 OK in 45ms (Views: 31.5ms | ActiveRecord: 0.6ms | Allocations: 3156)
+
+
+Started GET "/cats/3" for ::1 at 2022-11-12 15:41:34 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (10.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 324)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 1974)
+Completed 200 OK in 31ms (Views: 15.5ms | ActiveRecord: 10.9ms | Allocations: 3240)
+
+
+Started GET "/cats/3" for ::1 at 2022-11-12 15:41:41 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 322)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 1961)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.5ms | Allocations: 3226)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 15:41:46 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1222)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 2499)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.7ms | Allocations: 2774)
+
+
+Started GET "/cats/4" for ::1 at 2022-11-12 15:41:47 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1340)
+Completed 200 OK in 20ms (Views: 7.7ms | ActiveRecord: 0.4ms | Allocations: 2060)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 15:41:48 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 939)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 2230)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.3ms | Allocations: 2430)
+
+
+Started GET "/cats/5" for ::1 at 2022-11-12 15:41:49 -0800
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 83)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1345)
+Completed 200 OK in 15ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 2037)
+
+
+Started GET "/cats" for ::1 at 2022-11-12 15:41:50 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 939)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 2215)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.7ms | Allocations: 2415)
+
+

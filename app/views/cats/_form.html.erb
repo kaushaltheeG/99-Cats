@@ -1,0 +1,52 @@
+<% if action == :new %>
+    <h2>New Cat Form</h2>
+<% else %>
+    <h2>Edit Cat Form</h2>
+<% end %>
+
+<% action_form = action == :new ? cats_url : cat_url(@cat) %>
+<% submit = action == :new ? 'Submit' : 'Edit' %>
+
+<form action="<%= action_form %>" method="POST">
+    <% if action == :edit %>
+    <input type='hidden' name="_method" value="PATCH">
+    <% end %>
+
+    <label for='name'>Name:</label>
+    <input id='name' type="text" name="cat[name]" value="<%= cat.name %>" placeholder="cat.name"/><br />
+
+    <label for='birth'>Birth_date</label>
+    <input id='birth' required type="date" name="cat[birth_date]" value="<%= cat.birth_date %>" placeholder="cat.birth_date"/><br />
+    
+    <% if cat.sex == 'M' %>
+    <input type="radio" id='male' name="cat[sex]" value="M" checked />
+    <% else %>
+    <input type="radio" id='male' name="cat[sex]" value="M" />
+    <% end %>
+    <label for='male'>M</label><br>
+    <% if cat.sex == 'F' %>
+    <input type="radio" id='male' name="cat[sex]" value="F" checked />
+    <% else %>
+    <input type="radio" id='male' name="cat[sex]" value="F" />
+    <% end %>
+    <label for='male'>F</label><br>
+
+    <label for="color">Color:</label>
+    <select name="cat[color]" id="color" autofocus >  
+    <option disabled selected><%=cat.color%></option>
+    <% Cat::CAT_COLORS.each do |color| %> 
+        <% if cat.color == 'F' %>
+        <option value="<%=color%>"> <%=color%> selected</option>
+        <% else %>
+        <option value="<%=color%>"> <%=color%> </option>
+        <% end %>
+    <% end %>
+    
+    </select><br>
+
+    <label for="description">Description</label>
+    <textarea name="cat[description]" value=""><%=@cat.description%></textarea>
+
+
+    <input type="submit" value=<%= submit %> />
+</form>
