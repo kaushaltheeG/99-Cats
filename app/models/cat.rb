@@ -43,4 +43,6 @@ class Cat < ApplicationRecord
     end
 
 
+
+
 end
